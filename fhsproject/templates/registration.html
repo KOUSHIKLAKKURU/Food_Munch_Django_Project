@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+      *{
+        font-family: 'Quicksand', sans-serif;
+
+      }
+      .regis{
+          background-image:url('https://rare-gallery.com/uploads/posts/583424-food-4k-free.jpg');
+          background-size:cover;
+
+        }
+    </style>
+</head>
+<body>
+<!--django form
+<center>
+<h3 align="center"><mark>{{msg}}</mark></h3>
+<form method="post">
+    {% csrf_token %}
+{{form.as_p}}
+    <br>
+    <button class="btn btn-primary" type="submit">Register</button>
+</form>
+</center>-->
+
+<section class="regis hero is-dark is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-5-tablet is-4-desktop is-4-widescreen">
+               <h3 align="center"><mark>{{msg}}</mark></h3>
+              <form method="POST" class="box">
+                {% csrf_token %}
+                <h1 class="has-text-centered mb-5 is-size-3">Signup</h1>
+
+                <div class="field">
+                  <label for="" class="label">Fullname</label>
+                  <div class="control has-icons-left">
+                    {{ form.fullname }}
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-user"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="" class="label">Date of Birth</label>
+                  <div class="control has-icons-left">
+                    {{ form.dateofbirth }}
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-user"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="" class="label">Email</label>
+                  <div class="control has-icons-left">
+                    {{ form.email }}
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="" class="label">Username</label>
+                  <div class="control has-icons-left">
+                    {{ form.username }}
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="" class="label">Password</label>
+                  <div class="control has-icons-left">
+                    {{ form.password }}
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="" class="label">Location</label>
+                  <div class="control has-icons-left">
+                    {{ form.location }}
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="" class="label">Mobile No.</label>
+                  <div class="control has-icons-left">
+                    {{ form.contact }}
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <button class="button is-success" type=submit>
+                    Signup
+                  </button>
+                </div>
+                <div class="field">
+                  Already registered ? <a href="{% url 'LoginRegister' %}" class="btn btn-primary" style="color:white">Login</a>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</body>
+</html>

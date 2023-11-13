@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Enter your Email</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/cp.css' %}">
+</head>
+<body>
+    <form action="{% url 'emailsend' %}" method="post">
+		{% csrf_token %}
+     	<h2>Enter your email</h2>
+     	<label>email</label>
+     	<input type="text"
+     	       name="emailadd"
+     	       placeholder="Enter Email">
+     	       <br>
+
+     	<button type="submit">SUBMIT</button>
+          <a href="{% url 'home' %}" class="ca">MAIN HOME</a>
+     </form>
+</body>
+</html>

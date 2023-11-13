@@ -1,0 +1,52 @@
+.veg-starters-image{
+    border-radius: 16px;
+    height: 200px;
+    width: 220px;
+}
+
+.vs-heading{
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.kow-butt{
+    width: 200px;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+}
+
+.counter-btn {
+  padding: 0.5rem;
+  background-color: #e0e0e0;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.count {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 1rem;
+}
+
+.counter-btn:hover {
+  background-color: #d0d0d0;
+}
+
+.counter-btn:active {
+  background-color: #c0c0c0;
+}
+
+.increment {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.decrement {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}

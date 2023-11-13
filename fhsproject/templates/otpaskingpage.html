@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Otp</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/cp.css' %}">
+</head>
+<body>
+    <h3 align="center"><mark>{{msg}}</mark></h3>
+    <form action="/otpverify/{{otp}}/" method="post">
+		{% csrf_token %}
+     	<h2>Enter the otp</h2>
+     	<label>otp</label>
+     	<input type="number"
+     	       name="givenotp"
+     	       placeholder="Enter Otp">
+     	       <br>
+
+     	<button type="submit">SUBMIT</button>
+          <a href="{% url 'home' %}" class="ca">MAIN HOME</a>
+     </form>
+</body>
+</html>

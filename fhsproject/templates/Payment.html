@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Payment.css' %}" />
+    <title>Title</title>
+</head>
+<body>
+     <section class="payment-section">
+  <h2>Payment Details</h2>
+  <form id="payment-form">
+    <div class="form-group">
+      <label for="card-holder-name">Card Holder Name:</label>
+      <input type="text" id="card-holder-name" name="card-holder-name" required>
+    </div>
+    <div class="form-group">
+      <label for="card-number">Card Number:</label>
+      <input type="text" id="card-number" name="card-number" pattern="[0-9]{13,16}" required>
+    </div>
+    <div class="form-group">
+      <label for="expiry-date">Expiry Date:</label>
+      <input type="month" id="expiry-date" name="expiry-date" min="2023-02" required>
+    </div>
+    <div class="form-group">
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv" pattern="[0-9]{3,4}" required>
+    </div>
+    <div class="form-group">
+      <label for="billing-address">Billing Address:</label>
+      <textarea id="billing-address" name="billing-address" required></textarea>
+    </div>
+    <button type="submit">Pay Now</button>
+  </form>
+</section>
+
+</body>
+</html>
