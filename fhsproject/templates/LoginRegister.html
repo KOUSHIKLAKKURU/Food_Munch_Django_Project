@@ -38,15 +38,15 @@
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" name="emailid" placeholder="Enter your email" required>
+                <input type="text" name="emailid" id="email-id" placeholder="Enter your email" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="password" placeholder="Enter your password" required>
+                <input type="password" name="password" id="pass" placeholder="Enter your password" required>
               </div>
               <div class="text"><a href="{% url 'emailaskingpage' %}">Login using otp</a></div>
               <div class="button input-box">
-                <input type="submit" value="Sumbit">
+                <input type="submit" value="Sumbit" id="submit-btn">
               </div>
               <div class="text sign-up-text">Don't have an account? <a href="{% url 'registration' %}">Sigup now</a></div>
             </div>
